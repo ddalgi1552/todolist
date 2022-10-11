@@ -1,13 +1,14 @@
 let underLine = document.getElementById("under-line")
 let taskTabs = document.querySelectorAll(".task-tabs:nth-child(1) .hi")
-let tabs = document.querySelectorAll(".task-tabs div")
+let tabs = document.querySelectorAll(".task-tabs:nth-child(1) .hi")
 let mode= "all"
 let filterList=[]
 
 // let taskTabs = document.getElementsByClassName("hi") >htmlcollection은 foreach를못씀
 
-for(let i=1; i<tabs.length;i++){
+for(let i=0; i<tabs.length;i++){
   tabs[i].addEventListener("click",function(event){filter(event)})
+  // console.log(tabs)
 }
 
 
@@ -91,9 +92,11 @@ function toggleComplete(id){
   render()//값을 바꿨으니 불러서 ui를 업데이트해줘야해!
 }
 
+//랜덤 id만들기
 function randomIDGenerate(){
   return '_' + Math.random().toString(36).substring(2, 9);
 }
+
 
 function deleteTask(id){
   for (let i=0; i<taskList.length; i++){
@@ -113,7 +116,10 @@ function deleteTask(id){
 function filter(event){
   mode = event.target.id
   filterList = [];
-  if(mode == "ongoing"){
+  if(mode=="all"){
+    render()
+  }
+  else if(mode == "ongoing"){
     for(let i=0; i<taskList.length; i++){
       if(taskList[i].isComplete == false){
         filterList.push(taskList[i])

@@ -28,6 +28,7 @@ let taskInput = document.getElementById("task-input")
 let addButton = document.getElementById("add-button")
 let taskList=[]
 addButton.addEventListener("click",addTask)
+taskInput.addEventListener("press",addTask)
 //+버튼을 눌렀을 때 addTask의 기능을 수행한다
 
 function addTask(){

@@ -1,11 +1,27 @@
+@font-face {
+  font-family: 'KyoboHandwriting2020A';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
   margin:0;
-  background-image:url('https://resources.owllabs.com/hs-fs/hubfs/astronomy-1867616_1920-jpg.jpeg?width=890&name=astronomy-1867616_1920-jpg.jpeg') ;
+  background-image:url('https://png.pngtree.com/thumb_back/fw800/background/20200914/pngtree-black-halloween-blood-background-image_398571.jpg') ;
   background-repeat: no-repeat;
   background-size: cover;
 }
+img{
+  padding: 30px;
+}
 
 .container{
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'KyoboHandwriting2020A';
   background-color: white;
   min-height: 100vh;
   box-shadow:
@@ -57,4 +73,37 @@ body{
 
 .task-tabs div{
   cursor: pointer;
+}
+
+.hi{
+  font-size: 30px;
+}
+
+button {
+  margin: 20px;
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+
+input {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+  width: 700px;
 }

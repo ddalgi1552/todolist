@@ -5,6 +5,7 @@
   font-style: normal;
 }
 
+
 body{
   margin:0;
   background-image:url('https://png.pngtree.com/thumb_back/fw800/background/20200914/pngtree-black-halloween-blood-background-image_398571.jpg') ;
@@ -106,4 +107,33 @@ input {
   font-weight: 600;
   transition: 0.25s;
   width: 700px;
+}
+
+
+.fade-in-box {
+  display: inline-block;
+  background: yellow;
+  padding: 10px;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
